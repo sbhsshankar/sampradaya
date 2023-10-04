@@ -1,0 +1,267 @@
+*{
+    border: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Futura';
+    color: #b87333;
+}
+*::selection{
+    color: white;
+    background-color: #b87333;
+}
+html, body{
+    width: 100%;
+    height: 100%;
+}
+body{
+    background-color: #f7f7f7;
+}
+
+#nav{
+    height: 100px;
+    width: 100%;
+    position: fixed;
+    z-index: 999;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+#nav-left{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+#navleft1{
+    height: 45px;
+    overflow: hidden;
+}
+#navleft1 h1{
+    padding: 0 15px;
+    margin-top: 2px;
+    line-height: 0.8;
+    display: block;
+}
+#nav-right{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 10px;
+}
+#nav-right #links a{
+    text-decoration: none;
+    color: #b87333;
+    font-weight: 400;
+    font-size: 15px;
+    margin: 0 20px;
+    text-transform: uppercase;
+    font-family: 'Matter';
+}
+#icons{
+    background-color: #f7f7f7;
+    padding: 2px 4px;
+    border-radius: 20px;
+    margin-right: 20px;
+}
+#icons i{
+    font-size: 18px;
+    margin: 0 30px
+}
+
+#cursor{
+    height: 40px;
+    width: 40px;
+    background-color: #c68d56;
+    position: fixed;
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    z-index: 99;
+}
+
+#page1{
+    padding-top: 15vh;
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+}
+#page1 h1{
+    font-size: 15vw;
+    text-transform: uppercase;
+    line-height: 3vw;
+    padding: 0 3vw;
+}
+#page1 #videocontainer #play{
+    padding: 3vw 2.2vw;
+    background-color: #fff;
+    color: #b87333;
+    border-radius: 50%;
+    font-size: 1vw;
+    position: fixed;
+    opacity: 0;
+    scale: 0;
+}
+#page1 #videocontainer{
+    margin-top: -5vw;
+    height: 100vh;
+    width: 100%;
+    position: relative;
+}
+#page1 #videocontainer video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#page2{
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 3vw 1vw;
+}
+#page2 .elem{
+    width: 32%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#page2 .elem img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    scale: 1.1;
+}
+#page2 .elem .dets{
+    height: 45px;
+    width: 70%;
+    position: absolute;
+    background-color: #c68d56;
+    z-index: 99;
+    border-radius: 20px;
+}
+
+#page3{
+    min-height: 120vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+#page3 .child{
+   height: 54vh;
+   width: 35vw;
+   position: relative;
+}
+.child img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+#footer{
+    height: 40vh;
+    width: 100%;
+    background-color: #b87333;
+}
+#footer #title{
+    height: 100%;
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: all ease 1s;
+}
+#title h1{
+    color: #f7f7f7;
+    font-size: 6vw;
+    font-weight: 900;
+    text-transform: uppercase;
+    line-height: 0;
+}
+#title:hover{
+    scale: 1.1;
+    cursor: pointer;
+}
+
+
+
+@media (max-width:600px) {
+    
+    #page1{
+        min-height: 70vh;
+    }
+    #page1 h1{
+        font-size: 15.5vw;
+        padding: 0;
+    }
+    #page1 #videocontainer #play{
+        padding: 6vw 4.5vw;
+        font-size: 2vw;
+        opacity: 1;
+        scale: 1;
+        position: absolute;
+    }
+    #page1 #videocontainer{
+        padding: 0 1vw;
+        margin-top: -3vw;
+        height: 45vh;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+
+    #page2{
+        min-height: 100vh;
+        width: 100%;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        padding: 5vw 1vw;
+
+    }
+    #page2 .elem{
+        width: 100%;
+        height: 100vh;
+        margin-bottom: 2vw;
+    }
+
+    #nav-right{
+        display: block;
+        gap: 0px;
+        margin-top: 0px;
+    }
+    #nav-right #links a{
+        opacity: 0;
+        scale: 0;
+    }
+    #icons{
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        margin-top: -50px;
+        padding: 1px 1px;
+        border-radius: 20px;
+        margin-right: 0px;
+        background-color: transparent;
+    }
+    #icons i{
+        font-size: 18px;
+        margin: 0;
+    }
+    
+
+}
